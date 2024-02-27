@@ -7,9 +7,25 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct levelList: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            List{
+                ForEach(1..<20) { i in
+                    NavigationLink {
+                        level()
+                    } label: {
+                        Text("Level \(i)")
+                    }
+                }
+            }
+            .toolbar(.visible)
+            .navigationTitle("Level")
+            .navigationBarTitleDisplayMode(.inline)
+        }
+       
     }
 }
 
