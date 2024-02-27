@@ -12,24 +12,26 @@ struct ContentView : View {
     var body: some View {
         TabView{
             levelList().tabItem {
-                Image(systemName: "gamecontroller")
-                Text("Level").tag(1)
+                Image("book").frame(width: 5, height: 5)
+                .tag(1)
             }
             ArView().tabItem {
-                Image(systemName: "gamecontroller")
-                Text("Level").tag(1)
+                Image("universe").frame(width: 5, height: 5)
+                .tag(1)
             }
             levelList().tabItem {
-                Image(systemName: "gamecontroller")
-                Text("Level").tag(1)
+                Image("launch").frame(width: 5, height: 5)
+                .tag(1)
             }
-            levelList().tabItem {
-                Image(systemName: "gamecontroller")
-                Text("Level") }.tag(1)
+            profile().tabItem {
+                Image("alien").frame(width: 5, height: 5)
+                 }.tag(1)
         }
     }
 }
 
-#Preview {
-    ContentView()
+struct Previews : PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
