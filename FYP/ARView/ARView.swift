@@ -50,60 +50,97 @@ struct ArView : View {
 
 class Coordinator: NSObject{
     weak var view: ARView?
-    @objc func handelTap(_ recognizer: UITapGestureRecognizer){
-        guard let view = self.view else{return}
-        let tapLocation = recognizer.location(in: view)
+    
+    @objc func handleLongPress(_ recognizer: UITapGestureRecognizer? = nil) {
+        // Check if there is a view to work with
+        guard let view = self.view else { return }
         
-        if let entity = view.entity(at: tapLocation) as? ModelEntity{
-            entity.model?.materials = []
+        // Obtain the location of a tap or touch gesture
+        let tapLocation = recognizer!.location(in: view)
+        
+        // Checking if there's an entity at the tapped location within the view
+        if let entity = view.entity(at: tapLocation) as? ModelEntity {
+            
+            // Check if this entity is anchored to an anchor
+            if let anchorEntity = entity.anchor {
+                // Remove the model from the scene
+                anchorEntity.removeFromParent()
+            }
+        }
+    }
+    @objc func pinch(_ gesture: UITapGestureRecognizer? = nil) {
+        // Check if there is a view to work with
+        guard let view = self.view else { return }
+        
+        // Obtain the location of a tap or touch gesture
+        let tapLocation = recognizer!.location(in: view)
+        
+        // Checking if there's an entity at the tapped location within the view
+        if let entity = view.entity(at: tapLocation) as? ModelEntity {
+            
+            // Check if this entity is anchored to an anchor
+            if gesture.state == UIGestureRecognizerState.Changed {
+                    let transform = CGAffineTransformMakeScale(gesture.scale, gesture.scale)
+                    view.transform = transform
+                }
         }
     }
 }
 
-struct ARViewContainer:  UIViewRepresentable{
-    @Binding var modelConfirmForPlacement : Model?
-    
-    func makeUIView(context: Context) -> ARView {
-        let arView = ARView(frame: .zero)
-        context.coordinator.view = arView
+    struct ARViewContainer:  UIViewRepresentable{
+        @Binding var modelConfirmForPlacement : Model?
         
-        arView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handelTap)))
-        
-        let config = ARWorldTrackingConfiguration()
-        config.planeDetection = [.horizontal, .vertical]
-        config.environmentTexturing = .automatic
-        
-        if ARWorldTrackingConfiguration
-            .supportsSceneReconstruction(.mesh){
-            config.sceneReconstruction = .mesh
-        }
-        
-        arView.session.run(config)
-        _ = FocusEntity(on: arView, style: .classic())
-        return arView
-    }
-    func updateUIView(_ uiView: ARView, context: Context) {
-        if let model = self.modelConfirmForPlacement {
+        func makeUIView(context: Context) -> ARView {
+            let arView = ARView(frame: .zero)
+            context.coordinator.view = arView
             
-            if let modelEntity = model.modelEntity{
-                print("DEBUG: adding model to scene - \(model.modelName)")
-                
-                let anchorEntity = AnchorEntity(plane: .any)
-                
-                anchorEntity.addChild(modelEntity.clone(recursive: true))
-                
-                uiView.scene.addAnchor(anchorEntity)
-            }else{
-                print("DEBUG: Unable to load modelEntity for - \(model.modelName)")
+            let config = ARWorldTrackingConfiguration()
+            config.planeDetection = [.horizontal, .vertical]
+            config.environmentTexturing = .automatic
+            
+            if ARWorldTrackingConfiguration
+                .supportsSceneReconstruction(.mesh){
+                config.sceneReconstruction = .mesh
             }
-            DispatchQueue.main.async{
-                self.modelConfirmForPlacement = nil
+            
+            arView.session.run(config)
+            _ = FocusEntity(on: arView, style: .classic())
+            return arView
+        }
+        func updateUIView(_ uiView: ARView, context: Context) {
+            if let model = self.modelConfirmForPlacement {
+                
+                if let modelEntity = model.modelEntity{
+                    print("DEBUG: adding model to scene - \(model.modelName)")
+                    
+                    let anchorEntity = AnchorEntity(plane: .any)
+                    
+                    modelEntity.generateCollisionShapes(recursive: true)
+                    
+                    anchorEntity.addChild(modelEntity.clone(recursive: true))
+                    
+                    let longPressGesture = UILongPressGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleLongPress(_:)))
+                    let rotate = UILongPressGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleLongPress(_:)))
+                    let scale = UIPinchGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.pinch(_:)))
+                    
+                    // Add the UILongPressGestureRecognizer to the 'uiView' for user interaction.
+                    uiView.addGestureRecognizer(longPressGesture)
+                    uiView.addGestureRecognizer(scale)
+                    uiView.addGestureRecognizer(rotate)
+                    
+                    uiView.scene.addAnchor(anchorEntity)
+                }else{
+                    print("DEBUG: Unable to load modelEntity for - \(model.modelName)")
+                }
+                DispatchQueue.main.async{
+                    self.modelConfirmForPlacement = nil
+                }
             }
         }
-    }
-    func makeCoordinator() -> Coordinator {
-        Coordinator()
-    }
+        func makeCoordinator() -> Coordinator {
+            Coordinator()
+        }
+    
 }
 class CustomARView: ARView{
     var focusEntity: FocusEntity?
