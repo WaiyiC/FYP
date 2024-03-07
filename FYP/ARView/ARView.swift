@@ -16,6 +16,7 @@ struct ArView : View {
     @State private var isPlacementEnable = false
     @State private var selectedModel : Model?
     @State private var modelConfirmForPlacement : Model?
+    @State private var isAnimating = false
     
     private var models: [Model] = {
         let filemanager = FileManager.default
@@ -50,6 +51,7 @@ struct ArView : View {
 
 class Coordinator: NSObject{
     weak var view: ARView?
+    var currentScale: Float = 1.0
     
     @objc func handleLongPress(_ recognizer: UITapGestureRecognizer? = nil) {
         // Check if there is a view to work with
@@ -65,28 +67,30 @@ class Coordinator: NSObject{
             if let anchorEntity = entity.anchor {
                 // Remove the model from the scene
                 anchorEntity.removeFromParent()
+                
+                print("DEBUG: Deleted model from scene")
             }
         }
     }
-    @objc func pinch(_ gesture: UITapGestureRecognizer? = nil) {
-        // Check if there is a view to work with
-        guard let view = self.view else { return }
-        
-        // Obtain the location of a tap or touch gesture
-        let tapLocation = recognizer!.location(in: view)
-        
-        // Checking if there's an entity at the tapped location within the view
-        if let entity = view.entity(at: tapLocation) as? ModelEntity {
+    @objc func pinch(_ recognizer: UIPinchGestureRecognizer) {
+            guard let view = self.view else { return }
             
-            // Check if this entity is anchored to an anchor
-            if gesture.state == UIGestureRecognizerState.Changed {
-                    let transform = CGAffineTransformMakeScale(gesture.scale, gesture.scale)
-                    view.transform = transform
-                }
+            if recognizer.state == .began {
+                currentScale = 1.0
+            }
+            
+            let scale = Float(recognizer.scale)
+            let scaledScale = scale * currentScale
+            
+            if let entity = view.entity(at: recognizer.location(in: view)) as? ModelEntity {
+                entity.scale = SIMD3<Float>(repeating: scaledScale)
+            }
+            
+            if recognizer.state == .ended {
+                currentScale = scaledScale
+            }
         }
     }
-}
-
     struct ARViewContainer:  UIViewRepresentable{
         @Binding var modelConfirmForPlacement : Model?
         
@@ -122,16 +126,17 @@ class Coordinator: NSObject{
                     let longPressGesture = UILongPressGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleLongPress(_:)))
                     let rotate = UILongPressGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleLongPress(_:)))
                     let scale = UIPinchGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.pinch(_:)))
-                    
+                    uiView.addGestureRecognizer(scale)
                     // Add the UILongPressGestureRecognizer to the 'uiView' for user interaction.
                     uiView.addGestureRecognizer(longPressGesture)
-                    uiView.addGestureRecognizer(scale)
                     uiView.addGestureRecognizer(rotate)
                     
                     uiView.scene.addAnchor(anchorEntity)
                 }else{
                     print("DEBUG: Unable to load modelEntity for - \(model.modelName)")
                 }
+                
+                
                 DispatchQueue.main.async{
                     self.modelConfirmForPlacement = nil
                 }
@@ -140,8 +145,9 @@ class Coordinator: NSObject{
         func makeCoordinator() -> Coordinator {
             Coordinator()
         }
-    
 }
+
+
 class CustomARView: ARView{
     var focusEntity: FocusEntity?
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA04C9012B984F2500E6B62A /* action.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA04C9002B984F2500E6B62A /* action.swift */; };
 		BA38A2E72B8DC37B00F0B3DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38A2E62B8DC37B00F0B3DC /* AppDelegate.swift */; };
 		BA38A2E92B8DC37B00F0B3DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38A2E82B8DC37B00F0B3DC /* ContentView.swift */; };
 		BA38A2EB2B8DC37E00F0B3DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA38A2EA2B8DC37E00F0B3DC /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA04C9002B984F2500E6B62A /* action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = action.swift; sourceTree = "<group>"; };
 		BA38A2E32B8DC37B00F0B3DC /* FYP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FYP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA38A2E62B8DC37B00F0B3DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA38A2E82B8DC37B00F0B3DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				BA38A31B2B8DC9EF00F0B3DC /* object */,
 				BA38A3162B8DC48100F0B3DC /* ARView.swift */,
 				BAE72DC62B8DD1C90074169F /* selectView.swift */,
+				BA04C9002B984F2500E6B62A /* action.swift */,
 			);
 			path = ARView;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				BA38A3122B8DC3DA00F0B3DC /* levelList.swift in Sources */,
 				BAE72DC72B8DD1C90074169F /* selectView.swift in Sources */,
 				BA38A31A2B8DC55300F0B3DC /* profile.swift in Sources */,
+				BA04C9012B984F2500E6B62A /* action.swift in Sources */,
 				BAE72E142B8E35330074169F /* Sun.rcproject in Sources */,
 				BAE72E132B8E35330074169F /* Jupiter.rcproject in Sources */,
 				BA38A3142B8DC3F100F0B3DC /* level.swift in Sources */,
