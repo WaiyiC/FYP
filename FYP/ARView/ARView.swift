@@ -26,6 +26,8 @@ struct ArView : View {
         else{
             return[]
         }
+        
+        
         var availableModels :[Model] = []
         for filename in files where
         filename.hasSuffix("usdz"){
@@ -35,6 +37,20 @@ struct ArView : View {
         }
         return availableModels
     }()
+    
+//    private var rotationTimes: [Model: TimeInterval] = {
+//        // Define the rotation times for each model
+//        var rotationTimes: [Model: TimeInterval] = [:]
+//        
+//        for i in 1...12 {
+//            let modelName = "model\(i)"
+//            let model = Model(modelName: modelName)
+//            let rotationTime = TimeInterval(i) * 5.0 // Adjust the rotation time calculation as needed
+//            rotationTimes[model] = rotationTime
+//        }
+//        
+//        return rotationTimes
+//    }()
     
     var body: some View {
         ZStack(alignment: .bottom){
@@ -90,13 +106,30 @@ class Coordinator: NSObject{
                 currentScale = scaledScale
             }
         }
+    @objc func handlePanGesture(_ recognizer: UIPanGestureRecognizer) {
+            guard let view = self.view else { return }
+
+            let location = recognizer.location(in: view)
+
+            if let entity = view.entity(at: location) as? ModelEntity {
+                let translation = recognizer.translation(in: view)
+
+                var transform = entity.transform
+                transform.translation += SIMD3<Float>(Float(translation.x / 500), Float(-translation.y / 500), 0)
+                entity.transform = transform
+
+                recognizer.setTranslation(.zero, in: view)
+            }
+        }
     }
+    
     struct ARViewContainer:  UIViewRepresentable{
         @Binding var modelConfirmForPlacement : Model?
         
         func makeUIView(context: Context) -> ARView {
             let arView = ARView(frame: .zero)
             context.coordinator.view = arView
+            
             
             let config = ARWorldTrackingConfiguration()
             config.planeDetection = [.horizontal, .vertical]
@@ -109,6 +142,7 @@ class Coordinator: NSObject{
             
             arView.session.run(config)
             _ = FocusEntity(on: arView, style: .classic())
+            
             return arView
         }
         func updateUIView(_ uiView: ARView, context: Context) {
@@ -123,11 +157,14 @@ class Coordinator: NSObject{
                     
                     anchorEntity.addChild(modelEntity.clone(recursive: true))
                     
+                   
+                    
                     let longPressGesture = UILongPressGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleLongPress(_:)))
                     let rotate = UILongPressGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleLongPress(_:)))
                     let scale = UIPinchGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.pinch(_:)))
+                    let panGesture = UIPanGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handlePanGesture(_:)))
+                    uiView.addGestureRecognizer(panGesture)
                     uiView.addGestureRecognizer(scale)
-                    // Add the UILongPressGestureRecognizer to the 'uiView' for user interaction.
                     uiView.addGestureRecognizer(longPressGesture)
                     uiView.addGestureRecognizer(rotate)
                     

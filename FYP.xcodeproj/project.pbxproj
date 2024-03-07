@@ -403,6 +403,7 @@
 			mainGroup = BA38A2DA2B8DC37B00F0B3DC;
 			packageReferences = (
 				BAE72E4B2B8EFF450074169F /* XCRemoteSwiftPackageReference "FocusEntity" */,
+				BACD22462B99E64D0011CDB2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = BA38A2E42B8DC37B00F0B3DC /* Products */;
 			projectDirPath = "";
@@ -822,6 +823,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BACD22462B99E64D0011CDB2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.22.0;
+			};
+		};
 		BAE72E4B2B8EFF450074169F /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maxxfrazer/FocusEntity.git";
