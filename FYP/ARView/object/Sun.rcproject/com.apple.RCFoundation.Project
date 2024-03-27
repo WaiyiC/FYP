@@ -10,7 +10,99 @@
                 "name" : "surface"
               },
               "behaviors" : [
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "angularCoefficient" : 1,
+                                          "duration" : 1500,
+                                          "isTransformInitKeyPath" : true,
+                                          "linearCoefficient" : 1,
+                                          "location" : [
+                                            0,
+                                            0.1,
+                                            0
+                                          ],
+                                          "moveEase" : "none",
+                                          "orientation" : [
+                                            -4.371139e-08,
+                                            1,
+                                            -7.54979e-08,
+                                            3.300118e-15
+                                          ],
+                                          "respectPhysics" : false,
+                                          "target" : [
+                                            "7110E16C-2E6A-4913-822C-2503AAB84005"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "arguments" : "absolute",
+                                          "type" : "transform"
+                                        }
+                                      },
+                                      "identifier" : "B12F9097-4391-4B4F-A7F0-EF4B8456225E",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "A3F9F756-5AA7-4393-8FC4-76C5D833FF0D",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.3647059,
+                        0.7411765,
+                        0.6901961,
+                        1
+                      ],
+                      "identifier" : "E3B8E30B-18D5-4E20-B7ED-CAC3E37E67AE",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "Behaviour",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
 
+                                },
+                                "name" : "start"
+                              },
+                              "identifier" : "078D17B1-9C6B-417C-A2CA-BA4A5939D5B8",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
               ],
               "gravity" : [
                 0,
@@ -145,9 +237,9 @@
                 "cameraTransform" : [
                   1,
                   0,
-                  -0,
                   0,
-                  -0,
+                  0,
+                  0,
                   0.8774654,
                   -0.47964007,
                   0,
@@ -155,9 +247,9 @@
                   0.47964007,
                   0.8774654,
                   0,
-                  0.31561014,
-                  0.7947271,
-                  1.3398378,
+                  0.1985321,
+                  0.525337,
+                  0.86336195,
                   1
                 ],
                 "sceneTransform" : [
