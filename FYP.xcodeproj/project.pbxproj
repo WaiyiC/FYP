@@ -7,16 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA2F1F402BB43BC500A2EFEF /* Mars.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BA2F1F3F2BB43BC500A2EFEF /* Mars.rcproject */; };
-		BA2F1F4A2BB4405700A2EFEF /* telescope.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA2F1F412BB4405700A2EFEF /* telescope.svg */; };
-		BA2F1F4B2BB4405700A2EFEF /* universe.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA2F1F422BB4405700A2EFEF /* universe.svg */; };
-		BA2F1F4C2BB4405700A2EFEF /* constellations.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA2F1F432BB4405700A2EFEF /* constellations.svg */; };
-		BA2F1F4D2BB4405700A2EFEF /* launch.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA2F1F442BB4405700A2EFEF /* launch.svg */; };
-		BA2F1F4E2BB4405700A2EFEF /* solar-system.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA2F1F452BB4405700A2EFEF /* solar-system.svg */; };
-		BA2F1F4F2BB4405700A2EFEF /* book.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA2F1F462BB4405700A2EFEF /* book.svg */; };
-		BA2F1F502BB4405700A2EFEF /* astronaut.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA2F1F472BB4405700A2EFEF /* astronaut.svg */; };
-		BA2F1F512BB4405700A2EFEF /* alien.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA2F1F482BB4405700A2EFEF /* alien.svg */; };
-		BA2F1F522BB4405700A2EFEF /* astronomy.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA2F1F492BB4405700A2EFEF /* astronomy.svg */; };
 		BA38A2E72B8DC37B00F0B3DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38A2E62B8DC37B00F0B3DC /* AppDelegate.swift */; };
 		BA38A2E92B8DC37B00F0B3DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38A2E82B8DC37B00F0B3DC /* ContentView.swift */; };
 		BA38A2EB2B8DC37E00F0B3DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA38A2EA2B8DC37E00F0B3DC /* Assets.xcassets */; };
@@ -24,21 +14,32 @@
 		BA38A2F82B8DC37E00F0B3DC /* FYPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38A2F72B8DC37E00F0B3DC /* FYPTests.swift */; };
 		BA38A3022B8DC37E00F0B3DC /* FYPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38A3012B8DC37E00F0B3DC /* FYPUITests.swift */; };
 		BA38A3042B8DC37E00F0B3DC /* FYPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38A3032B8DC37E00F0B3DC /* FYPUITestsLaunchTests.swift */; };
-		BA38A3122B8DC3DA00F0B3DC /* levelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38A3112B8DC3DA00F0B3DC /* levelList.swift */; };
-		BA38A3142B8DC3F100F0B3DC /* level.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38A3132B8DC3F100F0B3DC /* level.swift */; };
 		BA38A3172B8DC48100F0B3DC /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38A3162B8DC48100F0B3DC /* ARView.swift */; };
 		BA38A31A2B8DC55300F0B3DC /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA38A3192B8DC55300F0B3DC /* profile.swift */; };
+		BA4BCEA12BF506F200ECC1D6 /* Uranus.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BA4BCE962BF506F200ECC1D6 /* Uranus.rcproject */; };
+		BA4BCEA22BF506F200ECC1D6 /* Venus.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BA4BCE972BF506F200ECC1D6 /* Venus.rcproject */; };
+		BA4BCEA32BF506F200ECC1D6 /* Neptune.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BA4BCE982BF506F200ECC1D6 /* Neptune.rcproject */; };
+		BA4BCEA42BF506F300ECC1D6 /* Saturn.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BA4BCE992BF506F200ECC1D6 /* Saturn.rcproject */; };
+		BA4BCEA52BF506F300ECC1D6 /* Moon.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BA4BCE9A2BF506F200ECC1D6 /* Moon.rcproject */; };
+		BA4BCEA62BF506F300ECC1D6 /* Mercury.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BA4BCE9B2BF506F200ECC1D6 /* Mercury.rcproject */; };
+		BA4BCEA72BF506F300ECC1D6 /* Jupiter.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BA4BCE9C2BF506F200ECC1D6 /* Jupiter.rcproject */; };
+		BA4BCEA82BF506F300ECC1D6 /* Sun.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BA4BCE9D2BF506F200ECC1D6 /* Sun.rcproject */; };
+		BA4BCEA92BF506F300ECC1D6 /* Pluto.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BA4BCE9E2BF506F200ECC1D6 /* Pluto.rcproject */; };
+		BA4BCEAA2BF506F300ECC1D6 /* Earth.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BA4BCE9F2BF506F200ECC1D6 /* Earth.rcproject */; };
+		BA4BCEAC2BF5073400ECC1D6 /* Mars.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BA4BCEAB2BF5073400ECC1D6 /* Mars.rcproject */; };
+		BA4BCEB62BF507CB00ECC1D6 /* universe.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA4BCEAD2BF507C900ECC1D6 /* universe.svg */; };
+		BA4BCEB72BF507CB00ECC1D6 /* astronaut.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA4BCEAE2BF507C900ECC1D6 /* astronaut.svg */; };
+		BA4BCEB82BF507CB00ECC1D6 /* book.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA4BCEAF2BF507C900ECC1D6 /* book.svg */; };
+		BA4BCEB92BF507CB00ECC1D6 /* launch.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA4BCEB02BF507CA00ECC1D6 /* launch.svg */; };
+		BA4BCEBA2BF507CB00ECC1D6 /* alien.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA4BCEB12BF507CA00ECC1D6 /* alien.svg */; };
+		BA4BCEBB2BF507CB00ECC1D6 /* astronomy.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA4BCEB22BF507CA00ECC1D6 /* astronomy.svg */; };
+		BA4BCEBC2BF507CB00ECC1D6 /* constellations.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA4BCEB32BF507CA00ECC1D6 /* constellations.svg */; };
+		BA4BCEBD2BF507CB00ECC1D6 /* telescope.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA4BCEB42BF507CA00ECC1D6 /* telescope.svg */; };
+		BA4BCEBE2BF507CB00ECC1D6 /* solar-system.svg in Resources */ = {isa = PBXBuildFile; fileRef = BA4BCEB52BF507CA00ECC1D6 /* solar-system.svg */; };
+		BA6EF30F2BF500FC00D9F12B /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6EF30C2BF500FA00D9F12B /* Level.swift */; };
+		BA6EF3102BF500FC00D9F12B /* levelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6EF30D2BF500FB00D9F12B /* levelList.swift */; };
+		BA6EF3112BF500FC00D9F12B /* levelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6EF30E2BF500FC00D9F12B /* levelView.swift */; };
 		BAE72DC52B8DD1970074169F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE72DC42B8DD1970074169F /* Model.swift */; };
-		BAE72DE02B8E22330074169F /* Earth.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BAE72DDF2B8E22330074169F /* Earth.rcproject */; };
-		BAE72E122B8E35330074169F /* Moon.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BAE72E092B8E35330074169F /* Moon.rcproject */; };
-		BAE72E132B8E35330074169F /* Jupiter.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BAE72E0A2B8E35330074169F /* Jupiter.rcproject */; };
-		BAE72E142B8E35330074169F /* Sun.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BAE72E0B2B8E35330074169F /* Sun.rcproject */; };
-		BAE72E152B8E35330074169F /* Mercury.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BAE72E0C2B8E35330074169F /* Mercury.rcproject */; };
-		BAE72E162B8E35330074169F /* Saturn.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BAE72E0D2B8E35330074169F /* Saturn.rcproject */; };
-		BAE72E172B8E35330074169F /* Pluto.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BAE72E0E2B8E35330074169F /* Pluto.rcproject */; };
-		BAE72E182B8E35330074169F /* Venus.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BAE72E0F2B8E35330074169F /* Venus.rcproject */; };
-		BAE72E192B8E35330074169F /* Uranus.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BAE72E102B8E35330074169F /* Uranus.rcproject */; };
-		BAE72E1A2B8E35330074169F /* Neptune.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = BAE72E112B8E35330074169F /* Neptune.rcproject */; };
 		BAE72E402B8E4B2B0074169F /* Sun.usdz in Resources */ = {isa = PBXBuildFile; fileRef = BAE72E352B8E4B1A0074169F /* Sun.usdz */; };
 		BAE72E412B8E4B2B0074169F /* Pluto.usdz in Resources */ = {isa = PBXBuildFile; fileRef = BAE72E362B8E4B1B0074169F /* Pluto.usdz */; };
 		BAE72E422B8E4B2B0074169F /* Earth.usdz in Resources */ = {isa = PBXBuildFile; fileRef = BAE72E372B8E4B1D0074169F /* Earth.usdz */; };
@@ -71,18 +72,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BA2F1F3F2BB43BC500A2EFEF /* Mars.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mars.rcproject; sourceTree = "<group>"; };
-		BA2F1F412BB4405700A2EFEF /* telescope.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = telescope.svg; path = ../../../../telescope.svg; sourceTree = "<group>"; };
-		BA2F1F422BB4405700A2EFEF /* universe.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = universe.svg; path = ../../../../universe.svg; sourceTree = "<group>"; };
-		BA2F1F432BB4405700A2EFEF /* constellations.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = constellations.svg; path = ../../../../constellations.svg; sourceTree = "<group>"; };
-		BA2F1F442BB4405700A2EFEF /* launch.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = launch.svg; path = ../../../../launch.svg; sourceTree = "<group>"; };
-		BA2F1F452BB4405700A2EFEF /* solar-system.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "solar-system.svg"; path = "../../../../solar-system.svg"; sourceTree = "<group>"; };
-		BA2F1F462BB4405700A2EFEF /* book.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = book.svg; path = ../../../../book.svg; sourceTree = "<group>"; };
-		BA2F1F472BB4405700A2EFEF /* astronaut.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = astronaut.svg; path = ../../../../astronaut.svg; sourceTree = "<group>"; };
-		BA2F1F482BB4405700A2EFEF /* alien.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = alien.svg; path = ../../../../alien.svg; sourceTree = "<group>"; };
-		BA2F1F492BB4405700A2EFEF /* astronomy.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = astronomy.svg; path = ../../../../astronomy.svg; sourceTree = "<group>"; };
-		BA2F1F562BB4469500A2EFEF /* Earth.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = Earth.reality; sourceTree = "<group>"; };
-		BA35B5802BB4884800339C15 /* Sun.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sun.reality; sourceTree = "<group>"; };
 		BA38A2E32B8DC37B00F0B3DC /* FYP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FYP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA38A2E62B8DC37B00F0B3DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA38A2E82B8DC37B00F0B3DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,21 +82,32 @@
 		BA38A2FD2B8DC37E00F0B3DC /* FYPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FYPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA38A3012B8DC37E00F0B3DC /* FYPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPUITests.swift; sourceTree = "<group>"; };
 		BA38A3032B8DC37E00F0B3DC /* FYPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYPUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BA38A3112B8DC3DA00F0B3DC /* levelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = levelList.swift; sourceTree = "<group>"; };
-		BA38A3132B8DC3F100F0B3DC /* level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = level.swift; sourceTree = "<group>"; };
 		BA38A3162B8DC48100F0B3DC /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		BA38A3192B8DC55300F0B3DC /* profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.swift; sourceTree = "<group>"; };
+		BA4BCE962BF506F200ECC1D6 /* Uranus.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Uranus.rcproject; sourceTree = "<group>"; };
+		BA4BCE972BF506F200ECC1D6 /* Venus.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Venus.rcproject; sourceTree = "<group>"; };
+		BA4BCE982BF506F200ECC1D6 /* Neptune.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Neptune.rcproject; sourceTree = "<group>"; };
+		BA4BCE992BF506F200ECC1D6 /* Saturn.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Saturn.rcproject; sourceTree = "<group>"; };
+		BA4BCE9A2BF506F200ECC1D6 /* Moon.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Moon.rcproject; sourceTree = "<group>"; };
+		BA4BCE9B2BF506F200ECC1D6 /* Mercury.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mercury.rcproject; sourceTree = "<group>"; };
+		BA4BCE9C2BF506F200ECC1D6 /* Jupiter.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Jupiter.rcproject; sourceTree = "<group>"; };
+		BA4BCE9D2BF506F200ECC1D6 /* Sun.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Sun.rcproject; sourceTree = "<group>"; };
+		BA4BCE9E2BF506F200ECC1D6 /* Pluto.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Pluto.rcproject; sourceTree = "<group>"; };
+		BA4BCE9F2BF506F200ECC1D6 /* Earth.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Earth.rcproject; sourceTree = "<group>"; };
+		BA4BCEAB2BF5073400ECC1D6 /* Mars.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Mars.rcproject; sourceTree = "<group>"; };
+		BA4BCEAD2BF507C900ECC1D6 /* universe.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = universe.svg; path = ../../../../../FYP/FYP/images/universe.svg; sourceTree = "<group>"; };
+		BA4BCEAE2BF507C900ECC1D6 /* astronaut.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = astronaut.svg; path = ../../../../../FYP/FYP/images/astronaut.svg; sourceTree = "<group>"; };
+		BA4BCEAF2BF507C900ECC1D6 /* book.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = book.svg; path = ../../../../../FYP/FYP/images/book.svg; sourceTree = "<group>"; };
+		BA4BCEB02BF507CA00ECC1D6 /* launch.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = launch.svg; path = ../../../../../FYP/FYP/images/launch.svg; sourceTree = "<group>"; };
+		BA4BCEB12BF507CA00ECC1D6 /* alien.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = alien.svg; path = ../../../../../FYP/FYP/images/alien.svg; sourceTree = "<group>"; };
+		BA4BCEB22BF507CA00ECC1D6 /* astronomy.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = astronomy.svg; path = ../../../../../FYP/FYP/images/astronomy.svg; sourceTree = "<group>"; };
+		BA4BCEB32BF507CA00ECC1D6 /* constellations.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = constellations.svg; path = ../../../../../FYP/FYP/images/constellations.svg; sourceTree = "<group>"; };
+		BA4BCEB42BF507CA00ECC1D6 /* telescope.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = telescope.svg; path = ../../../../../FYP/FYP/images/telescope.svg; sourceTree = "<group>"; };
+		BA4BCEB52BF507CA00ECC1D6 /* solar-system.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "solar-system.svg"; path = "../../../../../FYP/FYP/images/solar-system.svg"; sourceTree = "<group>"; };
+		BA6EF30C2BF500FA00D9F12B /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		BA6EF30D2BF500FB00D9F12B /* levelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = levelList.swift; sourceTree = "<group>"; };
+		BA6EF30E2BF500FC00D9F12B /* levelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = levelView.swift; sourceTree = "<group>"; };
 		BAE72DC42B8DD1970074169F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		BAE72DDF2B8E22330074169F /* Earth.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Earth.rcproject; path = ../../../../../Earth.rcproject; sourceTree = "<group>"; };
-		BAE72E092B8E35330074169F /* Moon.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Moon.rcproject; path = ../../../../../Moon.rcproject; sourceTree = "<group>"; };
-		BAE72E0A2B8E35330074169F /* Jupiter.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Jupiter.rcproject; path = ../../../../../Jupiter.rcproject; sourceTree = "<group>"; };
-		BAE72E0B2B8E35330074169F /* Sun.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Sun.rcproject; path = ../../../../../Sun.rcproject; sourceTree = "<group>"; };
-		BAE72E0C2B8E35330074169F /* Mercury.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Mercury.rcproject; path = ../../../../../Mercury.rcproject; sourceTree = "<group>"; };
-		BAE72E0D2B8E35330074169F /* Saturn.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Saturn.rcproject; path = ../../../../../Saturn.rcproject; sourceTree = "<group>"; };
-		BAE72E0E2B8E35330074169F /* Pluto.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Pluto.rcproject; path = ../../../../../Pluto.rcproject; sourceTree = "<group>"; };
-		BAE72E0F2B8E35330074169F /* Venus.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Venus.rcproject; path = ../../../../../Venus.rcproject; sourceTree = "<group>"; };
-		BAE72E102B8E35330074169F /* Uranus.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Uranus.rcproject; path = ../../../../../Uranus.rcproject; sourceTree = "<group>"; };
-		BAE72E112B8E35330074169F /* Neptune.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = Neptune.rcproject; path = ../../../../../Neptune.rcproject; sourceTree = "<group>"; };
 		BAE72E352B8E4B1A0074169F /* Sun.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sun.usdz; sourceTree = "<group>"; };
 		BAE72E362B8E4B1B0074169F /* Pluto.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Pluto.usdz; sourceTree = "<group>"; };
 		BAE72E372B8E4B1D0074169F /* Earth.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Earth.usdz; sourceTree = "<group>"; };
@@ -211,8 +211,9 @@
 		BA38A3102B8DC3C800F0B3DC /* Games */ = {
 			isa = PBXGroup;
 			children = (
-				BA38A3112B8DC3DA00F0B3DC /* levelList.swift */,
-				BA38A3132B8DC3F100F0B3DC /* level.swift */,
+				BA6EF30C2BF500FA00D9F12B /* Level.swift */,
+				BA6EF30D2BF500FB00D9F12B /* levelList.swift */,
+				BA6EF30E2BF500FC00D9F12B /* levelView.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -239,17 +240,17 @@
 		BA38A31B2B8DC9EF00F0B3DC /* object */ = {
 			isa = PBXGroup;
 			children = (
-				BAE72DDF2B8E22330074169F /* Earth.rcproject */,
-				BAE72E0A2B8E35330074169F /* Jupiter.rcproject */,
-				BAE72E0C2B8E35330074169F /* Mercury.rcproject */,
-				BAE72E092B8E35330074169F /* Moon.rcproject */,
-				BAE72E112B8E35330074169F /* Neptune.rcproject */,
-				BAE72E0E2B8E35330074169F /* Pluto.rcproject */,
-				BAE72E0D2B8E35330074169F /* Saturn.rcproject */,
-				BAE72E0B2B8E35330074169F /* Sun.rcproject */,
-				BAE72E102B8E35330074169F /* Uranus.rcproject */,
-				BAE72E0F2B8E35330074169F /* Venus.rcproject */,
-				BA2F1F3F2BB43BC500A2EFEF /* Mars.rcproject */,
+				BA4BCE9F2BF506F200ECC1D6 /* Earth.rcproject */,
+				BA4BCE9C2BF506F200ECC1D6 /* Jupiter.rcproject */,
+				BA4BCE9B2BF506F200ECC1D6 /* Mercury.rcproject */,
+				BA4BCE9A2BF506F200ECC1D6 /* Moon.rcproject */,
+				BA4BCEAB2BF5073400ECC1D6 /* Mars.rcproject */,
+				BA4BCE982BF506F200ECC1D6 /* Neptune.rcproject */,
+				BA4BCE9E2BF506F200ECC1D6 /* Pluto.rcproject */,
+				BA4BCE992BF506F200ECC1D6 /* Saturn.rcproject */,
+				BA4BCE9D2BF506F200ECC1D6 /* Sun.rcproject */,
+				BA4BCE962BF506F200ECC1D6 /* Uranus.rcproject */,
+				BA4BCE972BF506F200ECC1D6 /* Venus.rcproject */,
 			);
 			path = object;
 			sourceTree = "<group>";
@@ -265,15 +266,15 @@
 		BAE72DCA2B8DD8760074169F /* images */ = {
 			isa = PBXGroup;
 			children = (
-				BA2F1F482BB4405700A2EFEF /* alien.svg */,
-				BA2F1F472BB4405700A2EFEF /* astronaut.svg */,
-				BA2F1F492BB4405700A2EFEF /* astronomy.svg */,
-				BA2F1F462BB4405700A2EFEF /* book.svg */,
-				BA2F1F432BB4405700A2EFEF /* constellations.svg */,
-				BA2F1F442BB4405700A2EFEF /* launch.svg */,
-				BA2F1F452BB4405700A2EFEF /* solar-system.svg */,
-				BA2F1F412BB4405700A2EFEF /* telescope.svg */,
-				BA2F1F422BB4405700A2EFEF /* universe.svg */,
+				BA4BCEB12BF507CA00ECC1D6 /* alien.svg */,
+				BA4BCEAE2BF507C900ECC1D6 /* astronaut.svg */,
+				BA4BCEB22BF507CA00ECC1D6 /* astronomy.svg */,
+				BA4BCEAF2BF507C900ECC1D6 /* book.svg */,
+				BA4BCEB32BF507CA00ECC1D6 /* constellations.svg */,
+				BA4BCEB02BF507CA00ECC1D6 /* launch.svg */,
+				BA4BCEB52BF507CA00ECC1D6 /* solar-system.svg */,
+				BA4BCEB42BF507CA00ECC1D6 /* telescope.svg */,
+				BA4BCEAD2BF507C900ECC1D6 /* universe.svg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -289,10 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				BAE72E372B8E4B1D0074169F /* Earth.usdz */,
-				BA2F1F562BB4469500A2EFEF /* Earth.reality */,
 				BAE72E392B8E4B210074169F /* Jupiter.usdz */,
 				BAE72E3E2B8E4B290074169F /* Mars.usdz */,
-				BA35B5802BB4884800339C15 /* Sun.reality */,
 				BAE72E3B2B8E4B240074169F /* Mercury.usdz */,
 				BAE72E3A2B8E4B220074169F /* Moon.usdz */,
 				BAE72E382B8E4B200074169F /* Neptune.usdz */,
@@ -419,25 +418,25 @@
 				BA38A2EE2B8DC37E00F0B3DC /* Preview Assets.xcassets in Resources */,
 				BAE72E422B8E4B2B0074169F /* Earth.usdz in Resources */,
 				BAE72E462B8E4B2B0074169F /* Mercury.usdz in Resources */,
-				BA2F1F4B2BB4405700A2EFEF /* universe.svg in Resources */,
+				BA4BCEBD2BF507CB00ECC1D6 /* telescope.svg in Resources */,
 				BAE72E432B8E4B2B0074169F /* Neptune.usdz in Resources */,
-				BA2F1F4E2BB4405700A2EFEF /* solar-system.svg in Resources */,
+				BA4BCEBE2BF507CB00ECC1D6 /* solar-system.svg in Resources */,
 				BAE72E472B8E4B2B0074169F /* Saturn.usdz in Resources */,
-				BA2F1F502BB4405700A2EFEF /* astronaut.svg in Resources */,
+				BA4BCEB82BF507CB00ECC1D6 /* book.svg in Resources */,
 				BA38A2EB2B8DC37E00F0B3DC /* Assets.xcassets in Resources */,
 				BAE72E492B8E4B2B0074169F /* Mars.usdz in Resources */,
-				BA2F1F4C2BB4405700A2EFEF /* constellations.svg in Resources */,
+				BA4BCEBC2BF507CB00ECC1D6 /* constellations.svg in Resources */,
 				BAE72E4A2B8E4B2B0074169F /* Venus.usdz in Resources */,
+				BA4BCEB72BF507CB00ECC1D6 /* astronaut.svg in Resources */,
 				BAE72E412B8E4B2B0074169F /* Pluto.usdz in Resources */,
-				BA2F1F4A2BB4405700A2EFEF /* telescope.svg in Resources */,
 				BAE72E402B8E4B2B0074169F /* Sun.usdz in Resources */,
+				BA4BCEB62BF507CB00ECC1D6 /* universe.svg in Resources */,
 				BAE72E452B8E4B2B0074169F /* Moon.usdz in Resources */,
+				BA4BCEBB2BF507CB00ECC1D6 /* astronomy.svg in Resources */,
+				BA4BCEB92BF507CB00ECC1D6 /* launch.svg in Resources */,
+				BA4BCEBA2BF507CB00ECC1D6 /* alien.svg in Resources */,
 				BAE72E442B8E4B2B0074169F /* Jupiter.usdz in Resources */,
-				BA2F1F522BB4405700A2EFEF /* astronomy.svg in Resources */,
-				BA2F1F4D2BB4405700A2EFEF /* launch.svg in Resources */,
-				BA2F1F4F2BB4405700A2EFEF /* book.svg in Resources */,
 				BAE72E482B8E4B2B0074169F /* Uranus.usdz in Resources */,
-				BA2F1F512BB4405700A2EFEF /* alien.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,24 +461,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6EF30F2BF500FC00D9F12B /* Level.swift in Sources */,
+				BA4BCEA82BF506F300ECC1D6 /* Sun.rcproject in Sources */,
 				BA38A3172B8DC48100F0B3DC /* ARView.swift in Sources */,
-				BA2F1F402BB43BC500A2EFEF /* Mars.rcproject in Sources */,
-				BAE72DE02B8E22330074169F /* Earth.rcproject in Sources */,
-				BAE72E152B8E35330074169F /* Mercury.rcproject in Sources */,
+				BA4BCEA22BF506F200ECC1D6 /* Venus.rcproject in Sources */,
 				BA38A2E92B8DC37B00F0B3DC /* ContentView.swift in Sources */,
-				BAE72E182B8E35330074169F /* Venus.rcproject in Sources */,
-				BAE72E162B8E35330074169F /* Saturn.rcproject in Sources */,
-				BA38A3122B8DC3DA00F0B3DC /* levelList.swift in Sources */,
+				BA4BCEA42BF506F300ECC1D6 /* Saturn.rcproject in Sources */,
+				BA6EF3112BF500FC00D9F12B /* levelView.swift in Sources */,
+				BA4BCEA52BF506F300ECC1D6 /* Moon.rcproject in Sources */,
+				BA4BCEA12BF506F200ECC1D6 /* Uranus.rcproject in Sources */,
 				BA38A31A2B8DC55300F0B3DC /* profile.swift in Sources */,
-				BAE72E142B8E35330074169F /* Sun.rcproject in Sources */,
-				BAE72E132B8E35330074169F /* Jupiter.rcproject in Sources */,
-				BA38A3142B8DC3F100F0B3DC /* level.swift in Sources */,
-				BAE72E1A2B8E35330074169F /* Neptune.rcproject in Sources */,
-				BAE72E192B8E35330074169F /* Uranus.rcproject in Sources */,
+				BA6EF3102BF500FC00D9F12B /* levelList.swift in Sources */,
+				BA4BCEA62BF506F300ECC1D6 /* Mercury.rcproject in Sources */,
+				BA4BCEA72BF506F300ECC1D6 /* Jupiter.rcproject in Sources */,
+				BA4BCEAA2BF506F300ECC1D6 /* Earth.rcproject in Sources */,
+				BA4BCEA32BF506F200ECC1D6 /* Neptune.rcproject in Sources */,
 				BAE72DC52B8DD1970074169F /* Model.swift in Sources */,
-				BAE72E122B8E35330074169F /* Moon.rcproject in Sources */,
-				BAE72E172B8E35330074169F /* Pluto.rcproject in Sources */,
 				BA38A2E72B8DC37B00F0B3DC /* AppDelegate.swift in Sources */,
+				BA4BCEA92BF506F300ECC1D6 /* Pluto.rcproject in Sources */,
+				BA4BCEAC2BF5073400ECC1D6 /* Mars.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

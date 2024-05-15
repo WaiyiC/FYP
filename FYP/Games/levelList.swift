@@ -10,25 +10,18 @@ import SwiftUI
 import SwiftUI
 
 struct levelList: View {
-    var body: some View {
-        NavigationStack{
-            List{
-                ForEach(1..<20) { i in
-                    NavigationLink {
-                        level()
-                    } label: {
-                        Text("Level \(i)")
+        let levels = leveldata
+        var body: some View {
+            NavigationView {
+                List(levels) {
+                    level in
+                    NavigationLink( destination: levelView(level: level)) {
+                        Text(level.title).navigationBarTitle("Artworks")
                     }
                 }
             }
-            .toolbar(.visible)
-            .navigationTitle("Level")
-            .navigationBarTitleDisplayMode(.inline)
         }
-       
     }
-}
-
 #Preview {
     levelList()
 }
