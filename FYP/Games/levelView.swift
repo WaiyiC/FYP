@@ -12,7 +12,6 @@ struct levelView: View {
     var body: some View {
         VStack {
             Image(level.imageName)
-                .resizable() .frame(maxWidth: 300, maxHeight: 600)
                 .aspectRatio(contentMode: .fit)
             Text(level.title)
                 .font(.headline)
