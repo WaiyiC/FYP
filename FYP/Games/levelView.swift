@@ -13,10 +13,6 @@ struct levelView: View {
         VStack {
             Image(level.imageName)
                 .aspectRatio(contentMode: .fit)
-            Text(level.title)
-                .font(.headline)
-                .multilineTextAlignment(.center)
-                .lineLimit(3)
             
         }
         }
